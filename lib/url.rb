@@ -1,14 +1,4 @@
-class ApplicationController < ActionController::Base
-  # Prevent CSRF attacks by raising an exception.
-  # For APIs, you may want to use :null_session instead.
-  protect_from_forgery with: :exception
-  helper :all
-
-  def login_required
-  end
-
-
-  # formerly lib/url...
+module Url
   def sanatized_album_seo_path(album)
     album_seo_path(album, sanatize_for_url(album.name), sanatize_for_url(album.band.name))
   end
@@ -27,5 +17,4 @@ class ApplicationController < ActionController::Base
   def sanatize_for_url(thing)
     thing.downcase.gsub(/&/, "and").gsub(/ /, "-").gsub(/,|\.|'|\/|\\|!|:|\?|#|\(|\)|\[|\]/, "").gsub(/--/, "-")
   end
-  # ...formerly lib/url
 end

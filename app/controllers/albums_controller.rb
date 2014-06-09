@@ -1,58 +1,53 @@
 class AlbumsController < ApplicationController
-  before_action :set_album, only: [:show, :edit, :update, :destroy]
+  before_filter :login_required, :except => [:show, :index]
 
-  # GET /albums
   def index
+    @title = "All Albums"
     @albums = Album.all
   end
 
-  # GET /albums/1
   def show
+    @album = Album.find(params[:id])
+    @title = @album.name + " by " + @album.band.name
+
+    unless request.path == sanatized_album_seo_path(@album)
+      return redirect_to(sanatized_album_seo_path(@album))
+    end
   end
 
-  # GET /albums/new
   def new
     @album = Album.new
   end
 
-  # GET /albums/1/edit
   def edit
+    @album = Album.find(params[:id])
   end
 
-  # POST /albums
   def create
-    @album = Album.new(album_params)
+    @album = Album.new(params[:album])
 
     if @album.save
-      redirect_to @album, notice: 'Album was successfully created.'
+      flash[:notice] = 'Album was successfully created.'
+      redirect_to @album
     else
-      render :new
+      render :action => "new"
     end
   end
 
-  # PATCH/PUT /albums/1
   def update
-    if @album.update(album_params)
-      redirect_to @album, notice: 'Album was successfully updated.'
+    @album = Album.find(params[:id])
+
+    if @album.update_attributes(params[:album])
+      flash[:notice] = 'Album was successfully updated.'
+      redirect_to @album
     else
-      render :edit
+      render :action => "edit"
     end
   end
 
-  # DELETE /albums/1
   def destroy
+    @album = Album.find(params[:id])
     @album.destroy
-    redirect_to albums_url, notice: 'Album was successfully destroyed.'
+    redirect_to albums_path
   end
-
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_album
-      @album = Album.find(params[:id])
-    end
-
-    # Only allow a trusted parameter "white list" through.
-    def album_params
-      params.require(:album).permit(:name)
-    end
 end

@@ -1,13 +1,6 @@
 module ApplicationHelper
 
-  # temp user auth helper stubs
-  def logged_in?
-    true
-  end
-
-
-  # previously in /lib/url.rb
-  # module Url
+  # formerly lib/url...
   def sanatized_album_seo_path(album)
     album_seo_path(album, sanatize_for_url(album.name), sanatize_for_url(album.band.name))
   end
@@ -26,7 +19,12 @@ module ApplicationHelper
   def sanatize_for_url(thing)
     thing.downcase.gsub(/&/, "and").gsub(/ /, "-").gsub(/,|\.|'|\/|\\|!|:|\?|#|\(|\)|\[|\]/, "").gsub(/--/, "-")
   end
+  # ...formerly lib/url
 
+  # temp user auth helper stubs
+  def logged_in?
+    false
+  end
 
   def remote_audio_url(song)
     band  = sluggify(song.album.band.name)

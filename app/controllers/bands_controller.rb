@@ -1,58 +1,53 @@
 class BandsController < ApplicationController
-  before_action :set_band, only: [:show, :edit, :update, :destroy]
+  before_filter :login_required, :except => [:index, :show]
 
-  # GET /bands
   def index
-    @bands = Band.all
+    @title = "All Bands"
+    @bands = Band.all.sort_by{ |b| b.name }
   end
 
-  # GET /bands/1
   def show
+    @band = Band.find(params[:id])
+    @title = @band.name
+
+    unless request.path == sanatized_band_seo_path(@band)
+      return redirect_to(sanatized_band_seo_path(@band))
+    end
   end
 
-  # GET /bands/new
   def new
     @band = Band.new
   end
 
-  # GET /bands/1/edit
   def edit
+    @band = Band.find(params[:id])
   end
 
-  # POST /bands
   def create
-    @band = Band.new(band_params)
+    @band = Band.new(params[:band])
 
     if @band.save
-      redirect_to @band, notice: 'Band was successfully created.'
+      flash[:notice] = 'Band was successfully created.'
+      redirect_to @band
     else
-      render :new
+      render :action => "new"
     end
   end
 
-  # PATCH/PUT /bands/1
   def update
-    if @band.update(band_params)
-      redirect_to @band, notice: 'Band was successfully updated.'
+    @band = Band.find(params[:id])
+
+    if @band.update_attributes(params[:band])
+      flash[:notice] = 'Band was successfully updated.'
+      redirect_to @band
     else
-      render :edit
+      render :action => "edit"
     end
   end
 
-  # DELETE /bands/1
   def destroy
+    @band = Band.find(params[:id])
     @band.destroy
-    redirect_to bands_url, notice: 'Band was successfully destroyed.'
+    redirect_to bands_path
   end
-
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_band
-      @band = Band.find(params[:id])
-    end
-
-    # Only allow a trusted parameter "white list" through.
-    def band_params
-      params.require(:band).permit(:name)
-    end
 end

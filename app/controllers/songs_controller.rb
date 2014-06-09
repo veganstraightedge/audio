@@ -1,58 +1,53 @@
 class SongsController < ApplicationController
-  before_action :set_song, only: [:show, :edit, :update, :destroy]
+  before_filter :login_required, :except => [:show, :index]
 
-  # GET /songs
   def index
-    @songs = Song.all
+    @title = "All Songs"
+    @songs = Song.paginate(:page => params[:page], :per_page => 25)
   end
 
-  # GET /songs/1
   def show
+    @song = Song.find(params[:id])
+    @title = @song.pretty_name + " from " + @song.album.name + " by " + @song.album.band.name
+
+    unless request.path == sanatized_song_seo_path(@song)
+      return redirect_to(sanatized_song_seo_path(@song))
+    end
   end
 
-  # GET /songs/new
   def new
     @song = Song.new
   end
 
-  # GET /songs/1/edit
   def edit
+    @song = Song.find(params[:id])
   end
 
-  # POST /songs
   def create
-    @song = Song.new(song_params)
+    @song = Song.new(params[:song])
 
     if @song.save
-      redirect_to @song, notice: 'Song was successfully created.'
+      flash[:notice] = "Song (#{@song.pretty_name}) was successfully created."
+      redirect_to new_song_path
     else
-      render :new
+      render :action => "new"
     end
   end
 
-  # PATCH/PUT /songs/1
   def update
-    if @song.update(song_params)
-      redirect_to @song, notice: 'Song was successfully updated.'
+    @song = Song.find(params[:id])
+
+    if @song.update_attributes(params[:song])
+      flash[:notice] = 'Song was successfully updated.'
+      redirect_to @song
     else
-      render :edit
+      render :action => "edit"
     end
   end
 
-  # DELETE /songs/1
   def destroy
+    @song = Song.find(params[:id])
     @song.destroy
-    redirect_to songs_url, notice: 'Song was successfully destroyed.'
+    redirect_to songs_path
   end
-
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_song
-      @song = Song.find(params[:id])
-    end
-
-    # Only allow a trusted parameter "white list" through.
-    def song_params
-      params.require(:song).permit(:name)
-    end
 end

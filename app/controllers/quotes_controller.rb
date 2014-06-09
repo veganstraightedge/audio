@@ -1,58 +1,47 @@
 class QuotesController < ApplicationController
-  before_action :set_quote, only: [:show, :edit, :update, :destroy]
+  before_filter :login_required
 
-  # GET /quotes
   def index
     @quotes = Quote.all
   end
 
-  # GET /quotes/1
   def show
+    @quote = Quote.find(params[:id])
   end
 
-  # GET /quotes/new
   def new
     @quote = Quote.new
   end
 
-  # GET /quotes/1/edit
   def edit
+    @quote = Quote.find(params[:id])
   end
 
-  # POST /quotes
   def create
-    @quote = Quote.new(quote_params)
+    @quote = Quote.new(params[:quote])
 
     if @quote.save
-      redirect_to @quote, notice: 'Quote was successfully created.'
+      flash[:notice] = 'Quote was successfully created.'
+      redirect_to @quote
     else
-      render :new
+      render :action => "new"
     end
   end
 
-  # PATCH/PUT /quotes/1
   def update
-    if @quote.update(quote_params)
-      redirect_to @quote, notice: 'Quote was successfully updated.'
+    @quote = Quote.find(params[:id])
+
+    if @quote.update_attributes(params[:quote])
+      flash[:notice] = 'Quote was successfully updated.'
+      redirect_to @quote
     else
-      render :edit
+      render :action => "edit"
     end
   end
 
-  # DELETE /quotes/1
   def destroy
+    @quote = Quote.find(params[:id])
     @quote.destroy
-    redirect_to quotes_url, notice: 'Quote was successfully destroyed.'
+    redirect_to quotes_path
   end
-
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_quote
-      @quote = Quote.find(params[:id])
-    end
-
-    # Only allow a trusted parameter "white list" through.
-    def quote_params
-      params.require(:quote).permit(:excerpt)
-    end
 end
