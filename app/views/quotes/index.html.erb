@@ -1,25 +1,11 @@
-<h1>Listing quotes</h1>
+<h2>Quotes</h2>
 
 <table>
-  <thead>
-    <tr>
-      <th>Excerpt</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <tr>
+    <th>Band</th>
+    <th>Excerpt</th>
+    <th>Song</th>
+  </tr>
 
-  <tbody>
-    <% @quotes.each do |quote| %>
-      <tr>
-        <td><%= quote.excerpt %></td>
-        <td><%= link_to 'Show', quote %></td>
-        <td><%= link_to 'Edit', edit_quote_path(quote) %></td>
-        <td><%= link_to 'Destroy', quote, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+  <%= render @quotes %>
 </table>
-
-<br>
-
-<%= link_to 'New Quote', new_quote_path %>
