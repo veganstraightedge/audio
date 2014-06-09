@@ -1,11 +1,22 @@
 Rails.application.routes.draw do
-  resources :quotes
+  # home
+  root "bands#index"
 
-  resources :albums
+  resources  :albums, :bands, :songs, :quotes
 
-  resources :songs
 
-  resources :bands
+get "/bands/:id/:band"                      => "bands#show",  as: "band_seo"
+get "/albums/:id/:album/by/:band"           => "albums#show", as: "album_seo"
+get "/songs/:id/:song/by/:band/from/:album" => "songs#show",  as: "song_seo"
+get "/songs/page/:page"                     => "songs#index", as: "songs_page"
+
+  # # defaults
+  # map.connect ':controller/:action/:id'
+  # map.connect ':controller/:action/:id.:format'
+
+
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
