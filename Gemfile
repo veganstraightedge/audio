@@ -11,7 +11,6 @@ gem "sass-rails"
 gem "uglifier",                ">= 1.3.0"
 gem "will_paginate", git: "https://github.com/nazgum/will_paginate"
 gem "will_paginate-bootstrap"
-gem "turbolinks"
 
 group :development do
   gem 'sqlite3'
