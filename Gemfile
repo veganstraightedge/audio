@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "2.1.1"
+ruby "2.2.2"
 
 # Temporary fix
 gem "sprockets", "=2.11.0"
