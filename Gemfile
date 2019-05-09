@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "2.2.2"
+# ruby "2.2.2"
 
 # Temporary fix
 gem "sprockets", "=2.11.0"
@@ -19,7 +19,7 @@ group :development do
   gem "foreman"
   gem "guard-rspec"
   gem "gx"
-  
+
   # For Rails 4.1
   gem "spring"
 end
