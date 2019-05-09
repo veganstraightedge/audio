@@ -1,4 +1,4 @@
-# band urls to redirect
+# Band URLs to redirect
 
 /bands/3/bombs-and-beating-hearts
 /bands/8/bramble
