@@ -8,3 +8,12 @@
 /bands/7/rise-over-run
 /bands/4/the-mooks
 /bands/5/yunavi-(formerly-trebuchet)
+
+# TODO
+
+- Convert to static site
+- Use bootstrap
+- Make into a modern Heroku app
+- Move to GitHub Pages?
+- Add HTTPS
+- Add HTTP -> HTTPS redirect
