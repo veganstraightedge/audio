@@ -36,6 +36,6 @@
     <span class="alt">Free as the Air You Breathe</span>
   </footer>
 
-  <%= google_analytics("UA-193482-17") %>
+  <%= analytics_init if Rails.env.production? %>
 </body>
 </html>
