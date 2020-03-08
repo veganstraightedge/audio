@@ -9,6 +9,7 @@ group :development, :test do
   gem 'byebug'
   gem 'diff-lcs'
   gem 'ffi'
+  gem 'google-analytics-rails'
   gem 'msgpack'
   gem 'rails'
 

@@ -15,7 +15,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
 
-      - name: Install dependencies
+      - name: Install dependencies with Bundler
         run: |
           gem install bundler
           bundle install --gemfile=Gemfile-rubocop

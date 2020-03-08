@@ -17,7 +17,7 @@ jobs:
         options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
 
     steps:
-      - name: Install libraries
+      - name: Install libraries with apt-get
         run: |
           sudo apt-get update
           sudo apt-get install -y postgresql-client libpq-dev
@@ -41,7 +41,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
 
-      - name: Bundle install
+      - name: Install dependencies with Bundler
         run: |
           gem install bundler
           bundle config path vendor/bundle
@@ -58,7 +58,7 @@ jobs:
         run: |
           bundle exec rails db:create
 
-      - name: Run tests
+      - name: Run tests with Rspec
         env:
           PGUSER: postgres
         run: |
