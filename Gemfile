@@ -1,32 +1,23 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-ruby "2.6.3"
+ruby '2.6.5'
 
-# Temporary fix
-gem "sprockets", "=2.11.0"
+gem 'rails'
+gem 'pg'
+gem 'puma'
+gem 'sass-rails'
+gem 'bootsnap', require: false
 
-gem 'rails', '4.1.1'
-gem "jquery-rails"
-gem "sass-rails"
-gem "uglifier",                ">= 1.3.0"
-gem "will_paginate", git: "https://github.com/nazgum/will_paginate"
-gem "will_paginate-bootstrap"
+group :development, :test do
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+end
 
 group :development do
-  gem 'sqlite3'
-  gem "better_errors"
-  gem "binding_of_caller"
-  gem "foreman"
-  gem "guard-rspec"
-  gem "gx"
-
-  # For Rails 4.1
-  gem "spring"
+  gem 'web-console', '>= 3.3.0'
+  gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-group :production, :staging do
-  gem "newrelic_rpm"
-  gem "puma"
-  gem "rails_12factor"
-  gem "pg"
-end
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
