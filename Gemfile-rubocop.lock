@@ -27,10 +27,6 @@ GEM
       rubocop (>= 0.68.1)
     ruby-progressbar (1.10.1)
     thread_safe (0.3.6)
-    tzinfo (2.0.1)
-      concurrent-ruby (~> 1.0)
-    tzinfo-data (1.2019.3)
-      tzinfo (>= 1.0.0)
     unicode-display_width (1.6.1)
 
 PLATFORMS
