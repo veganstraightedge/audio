@@ -4,6 +4,7 @@ ruby '2.6.5'
 
 group :development, :test do
   # For: rubocop --parallel
+  gem 'bindex'
   gem 'rails'
 
   gem 'rubocop'

@@ -57,6 +57,7 @@ GEM
       tzinfo (~> 1.1)
       zeitwerk (~> 2.2)
     ast (2.4.0)
+    bindex (0.8.1)
     builder (3.2.4)
     concurrent-ruby (1.1.6)
     crass (1.0.6)
@@ -150,6 +151,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bindex
   rails
   rubocop
   rubocop-performance
