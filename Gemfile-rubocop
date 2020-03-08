@@ -9,7 +9,7 @@ group :development, :test do
   gem 'minitest'
   gem 'rake'
   gem 'thread_safe'
-  gem 'tzinfo'
+  gem 'tzinfo-data'
 
   gem 'rubocop'
   gem 'rubocop-performance'
