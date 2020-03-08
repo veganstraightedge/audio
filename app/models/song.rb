@@ -5,13 +5,23 @@ class Song < ApplicationRecord
 
   class << self
     def find_for_select
-      Song.all
-          .sort_by { |song| song.album.band.name }
-          .map { |s| ["#{s.album.band.name} : #{s.album.name} : #{s.pretty_name}", song.id] }
+      @songs = Song.all
+      sort_songs
+      map_songs
     end
   end
 
   def pretty_name
     name.gsub(/^\d+\W/, '')
+  end
+
+  private
+
+  def sort_songs
+    @songs.sort_by { |song| song.album.band.name }
+  end
+
+  def map_songs
+    @songs.map { |s| ["#{s.album.band.name} : #{s.album.name} : #{s.pretty_name}", s.id] }
   end
 end
