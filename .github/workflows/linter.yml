@@ -18,7 +18,7 @@ jobs:
       - name: Install dependencies
         run: |
           gem install bundler
-          bundle install --gemfile=Gemfile-rubocop --no-document
+          bundle install --gemfile=Gemfile-rubocop
 
       - name: Run linter
         run: |
