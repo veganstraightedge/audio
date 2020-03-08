@@ -1,0 +1,45 @@
+on: [push]
+
+name: Tests
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:11
+        ports: ['5432:5432']
+        env:
+          POSTGRES_PASSWORD: ""
+
+    steps:
+      - name: Install libraries
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y postgresql-client libpq-dev
+
+      - name: Set up Ruby 2.6
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: '2.6.x'
+
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - name: Install dependencies
+        run: |
+          gem install bundler
+          bundle install --jobs 4 --retry 3
+
+      - name: Configure database
+        env:
+          PGUSER: postgres
+        run: |
+          bundle exec rails db:create
+
+      - name: Run tests
+        env:
+          PGUSER: postgres
+        run: |
+          rspec

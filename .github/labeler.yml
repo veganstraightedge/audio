@@ -1,0 +1,11 @@
+Actions:
+  - .github/**/*
+
+Migrations:
+  - db/migrate/*
+  - db/schema.rb
+
+Dependencies":
+  - Gemfile
+  - Gemfile.lock
+
