@@ -12,6 +12,7 @@ group :development, :test do
   gem 'google-analytics-rails'
   gem 'msgpack'
   gem 'rails'
+  gem 'rb-fsevent'
 
   gem 'rubocop'
   gem 'rubocop-performance'

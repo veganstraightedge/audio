@@ -123,6 +123,7 @@ GEM
       thor (>= 0.20.3, < 2.0)
     rainbow (3.0.0)
     rake (13.0.1)
+    rb-fsevent (0.10.3)
     rexml (3.2.4)
     rubocop (0.80.1)
       jaro_winkler (~> 1.5.1)
@@ -166,6 +167,7 @@ DEPENDENCIES
   google-analytics-rails
   msgpack
   rails
+  rb-fsevent
   rubocop
   rubocop-performance
   rubocop-rspec
