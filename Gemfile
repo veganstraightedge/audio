@@ -8,6 +8,7 @@ gem 'puma'
 gem 'rails'
 gem 'sass-rails'
 gem 'will_paginate'
+gem 'google-analytics-rails'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
