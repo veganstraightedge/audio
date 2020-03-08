@@ -10,6 +10,7 @@ GEM
     ast (2.4.0)
     builder (3.2.4)
     concurrent-ruby (1.1.6)
+    crass (1.0.6)
     erubi (1.9.0)
     i18n (1.8.2)
       concurrent-ruby (~> 1.0)
@@ -53,6 +54,7 @@ DEPENDENCIES
   activesupport
   builder
   concurrent-ruby
+  crass
   erubi
   i18n
   mini_portile2 (= 2.4.0)
