@@ -14,6 +14,7 @@ group :development, :test do
   gem 'rails'
   gem 'rb-fsevent'
   gem 'rb-inotify'
+  gem 'ruby_dep'
 
   gem 'rubocop'
   gem 'rubocop-performance'
