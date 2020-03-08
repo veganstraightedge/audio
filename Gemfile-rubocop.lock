@@ -66,6 +66,7 @@ GEM
     crass (1.0.6)
     diff-lcs (1.3)
     erubi (1.9.0)
+    ffi (1.12.2)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     i18n (1.8.2)
@@ -160,6 +161,7 @@ DEPENDENCIES
   bootsnap
   byebug
   diff-lcs
+  ffi
   msgpack
   rails
   rubocop

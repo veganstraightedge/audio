@@ -8,6 +8,7 @@ group :development, :test do
   gem 'bootsnap'
   gem 'byebug'
   gem 'diff-lcs'
+  gem 'ffi'
   gem 'msgpack'
   gem 'rails'
 
