@@ -1,1 +1,1 @@
-GA.tracker = "UA-193482-17"
+GA.tracker = 'UA-193482-17'
