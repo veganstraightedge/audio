@@ -4,10 +4,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   helper :all
 
-  def login_required
-  end
-
-
   # formerly lib/url...
   def sanatized_album_seo_path(album)
     album_seo_path(album, sanatize_for_url(album.name), sanatize_for_url(album.band.name))
