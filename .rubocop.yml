@@ -7,6 +7,7 @@ require:
 AllCops:
   Exclude:
     - 'db/schema.rb'
+    - 'bin/*'
 
 Layout/HashAlignment:
   EnforcedHashRocketStyle: table
