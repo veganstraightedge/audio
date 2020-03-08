@@ -21,7 +21,7 @@ Metrics/BlockLength:
     - config/routes.rb
 
 Metrics/AbcSize:
-  Max: 19
+  Max: 14
 
 Naming/VariableNumber:
   EnforcedStyle: snake_case
