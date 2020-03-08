@@ -17,8 +17,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-        gem install rubocop rubocop-performance rubocop-rspec --no-document
+          gem install bundler rubocop rubocop-performance rubocop-rspec --no-document
 
       - name: Run linter
         run: |
-          rubocop --parallel
+          bundle exec rubocop --parallel
