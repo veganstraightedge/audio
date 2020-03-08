@@ -10,6 +10,7 @@ GEM
     ast (2.4.0)
     builder (3.2.4)
     concurrent-ruby (1.1.6)
+    erubi (1.9.0)
     i18n (1.8.2)
       concurrent-ruby (~> 1.0)
     jaro_winkler (1.5.4)
@@ -46,6 +47,7 @@ DEPENDENCIES
   activesupport
   builder
   concurrent-ruby
+  erubi
   i18n
   minitest
   rake
