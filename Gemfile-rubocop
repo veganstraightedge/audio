@@ -1,0 +1,16 @@
+source 'https://rubygems.org'
+
+ruby '2.6.5'
+
+group :development, :test do
+  # For: rubocop --parallel
+  gem 'bindex'
+  gem 'bootsnap'
+  gem 'byebug'
+  gem 'msgpack'
+  gem 'rails'
+
+  gem 'rubocop'
+  gem 'rubocop-performance'
+  gem 'rubocop-rspec'
+end
