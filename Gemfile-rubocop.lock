@@ -27,6 +27,8 @@ GEM
       rubocop (>= 0.68.1)
     ruby-progressbar (1.10.1)
     thread_safe (0.3.6)
+    tzinfo (1.2.6)
+      thread_safe (~> 0.1)
     unicode-display_width (1.6.1)
 
 PLATFORMS
@@ -41,7 +43,7 @@ DEPENDENCIES
   rubocop-performance
   rubocop-rspec
   thread_safe
-  tzinfo-data
+  tzinfo (= 1.2.6)
 
 RUBY VERSION
    ruby 2.6.5p114
