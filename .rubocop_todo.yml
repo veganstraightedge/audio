@@ -1,9 +1,3 @@
-
-# Offense count: 1
-Lint/DuplicateHashKey:
-  Exclude:
-    - 'db/seeds.rb'
-
 # Offense count: 1
 Metrics/AbcSize:
   Max: 19

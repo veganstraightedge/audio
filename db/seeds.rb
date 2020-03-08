@@ -14,7 +14,6 @@
 
   'Bombs and Beating Hearts'    => {
     :quotes                       => {
-      '01 Love Is Freedom' => "And we'll need love like this bomb inside of me. It can kill you or it can set you free. And we'll need violence like this beating heart you see. It can kill you or it can set you free.",
       '01 Love Is Freedom' => "How can you be afraid if your life never even starts? We're the deadliest things in the world, fucking bombs and beating hearts."
     },
 
