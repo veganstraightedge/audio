@@ -16,7 +16,10 @@ module ApplicationHelper
   end
 
   def sanatize_for_url thing
-    thing.downcase.gsub(/&/, 'and').tr(' ', '-').gsub(%r{,|\.|'|/|\\|!|:|\?|#|\(|\)|\[|\]}, '').gsub(/--/, '-')
+    thing.downcase
+         .gsub(/&/, 'and')
+         .tr(' ', '-').gsub(%r{,|\.|'|/|\\|!|:|\?|#|\(|\)|\[|\]}, '')
+         .gsub(/--/, '-')
   end
   # ...formerly lib/url
 
@@ -75,7 +78,7 @@ module ApplicationHelper
     singular_path ||= plural_path
     link_to 'Cancel',
             (controller.action_name == 'index' ? plural_path : singular_path),
-            confirm: "Are you sure you want to cancel? You will lose all changes you've made on this page.",
+            confirm: 'Are you sure you you’re sure? There is NO UNDO.',
             class:   'cancel'
   end
 
