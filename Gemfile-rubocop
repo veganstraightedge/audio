@@ -13,6 +13,7 @@ group :development, :test do
   gem 'msgpack'
   gem 'rails'
   gem 'rb-fsevent'
+  gem 'rb-inotify'
 
   gem 'rubocop'
   gem 'rubocop-performance'
