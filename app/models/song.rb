@@ -6,8 +6,8 @@ class Song < ApplicationRecord
   class << self
     def find_for_select
       Song.all
-          .sort_by { |s| s.album.band.name }
-          .map { |song| ["#{song.album.band.name} : #{song.album.name} : #{song.pretty_name}", song.id] }
+          .sort_by { |song| song.album.band.name }
+          .map { |s| ["#{s.album.band.name} : #{s.album.name} : #{s.pretty_name}", song.id] }
     end
   end
 
