@@ -15,7 +15,7 @@ group :development, :test do
   gem 'pg'
   gem 'puma'
   gem 'rails'
-  gem 'rspec'
+  gem 'rspec-rails'
   gem 'rb-fsevent'
   gem 'rb-inotify'
   gem 'ruby_dep'
