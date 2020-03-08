@@ -7,6 +7,7 @@ gem 'pg'
 gem 'puma'
 gem 'sass-rails'
 gem 'bootsnap', require: false
+gem 'will_paginate'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
