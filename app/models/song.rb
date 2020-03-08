@@ -1,4 +1,4 @@
-class Song < ActiveRecord::Base
+class Song < ApplicationRecord
   belongs_to :album
   has_many :quotes, :dependent => :destroy
   default_scope { order("name ASC") }

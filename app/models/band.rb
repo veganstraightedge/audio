@@ -1,4 +1,4 @@
-class Band < ActiveRecord::Base
+class Band < ApplicationRecord
   has_many :albums, :dependent => :destroy
   has_many :quotes, :dependent => :destroy
 
