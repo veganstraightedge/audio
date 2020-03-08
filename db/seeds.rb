@@ -1,7 +1,7 @@
 {
   "Aiden and Lucas"             => {
     :quotes      => {
-      "Filler" => %q(What happened to you? You're not the same. Something in your head made a violent change.)
+      "Filler" => "What happened to you? You're not the same. Something in your head made a violent change."
     },
 
     "Candy Pops" => [
@@ -14,8 +14,8 @@
 
   "Bombs and Beating Hearts"    => {
     :quotes                       => {
-      "01 Love Is Freedom" => %q(And we'll need love like this bomb inside of me. It can kill you or it can set you free. And we'll need violence like this beating heart you see. It can kill you or it can set you free.),
-      "01 Love Is Freedom" => %q(How can you be afraid if your life never even starts? We're the deadliest things in the world, fucking bombs and beating hearts.)
+      "01 Love Is Freedom" => "And we'll need love like this bomb inside of me. It can kill you or it can set you free. And we'll need violence like this beating heart you see. It can kill you or it can set you free.",
+      "01 Love Is Freedom" => "How can you be afraid if your life never even starts? We're the deadliest things in the world, fucking bombs and beating hearts."
     },
 
     "From Dumpsters Rise"         => [
@@ -71,7 +71,7 @@
 
   "Fuck, Yes!!!!"               => {
     :quotes => {
-      "02 Fighting for Our Lives" => %q(When we fight, we're fighting for our lives. And you can bet that's a threat and we're not gonna stop until every last law is broken and every fucking cop is dead.)
+      "02 Fighting for Our Lives" => "When we fight, we're fighting for our lives. And you can bet that's a threat and we're not gonna stop until every last law is broken and every fucking cop is dead."
     },
 
     "Misc"  => [
@@ -94,7 +94,7 @@
 
   "Harper's Ferry Arsenal"      => {
     :quotes     => {
-      "06 Same Shit, Different Stop" => %q(Alienated, we flock to the convenience of alienation and further cycle of exploitation and oppression, but I hope and I dream of a world where we rely on ourselves for all we need.)
+      "06 Same Shit, Different Stop" => 'Alienated, we flock to the convenience of alienation and further cycle of exploitation and oppression, but I hope and I dream of a world where we rely on ourselves for all we need.'
     },
 
     "Demo 2004" => [
@@ -109,7 +109,7 @@
 
   "James Miska"                 => {
     :quotes                                                            => {
-      "02 Trebuchet" => %q(I see no reason we should all live and die alone.)
+      "02 Trebuchet" => 'I see no reason we should all live and die alone.'
     },
 
     "You'll Think What You Want to Think (And Do What You Want to Do)" => [
@@ -226,7 +226,7 @@
 
   "Rise Over Run"               => {
     :quotes                                                        => {
-      "19 Prauge Was A Good Start" => %q(I want peace. We all want peace. But I'd rather be free.)
+      "19 Prauge Was A Good Start" => "I want peace. We all want peace. But I'd rather be free."
     },
 
     "Brycc House Benefit"                                          => [
@@ -261,7 +261,7 @@
 
   "Ten Times Over"              => {
     :quotes => {
-      "05 Open Letter to the FBI" => %q(This time we're not moving a fucking inch.)
+      "05 Open Letter to the FBI" => "This time we're not moving a fucking inch."
     },
 
     "Demo"  => [
@@ -275,7 +275,7 @@
 
   "The Mooks"                   => {
     :quotes                => {
-      "06 Sweet Corn" => %q(Ten yard fight scoring in the end zone, while I'm stuck in the friend zone. You say you wanna be best friends. Fuck that. I wanna be your boyfriend.)
+      "06 Sweet Corn" => "Ten yard fight scoring in the end zone, while I'm stuck in the friend zone. You say you wanna be best friends. Fuck that. I wanna be your boyfriend."
     },
 
     "Like You Like You"    => [
@@ -296,7 +296,7 @@
 
   "Yunavi (formerly Trebuchet)" => {
     :quotes                       => {
-      "04 Defeatism Is For Losers" => %q(We don't care about the fire that's coming, because we're already candles burning.)
+      "04 Defeatism Is For Losers" => "We don't care about the fire that's coming, because we're already candles burning."
     },
 
     "The Wilderness"              => [
@@ -329,16 +329,16 @@
     ]
   }
 }.each do |band, albums|
-  b = Band.create!(:name => band)
-  puts "#{b.name}"
+  b = Band.create!(name: band)
+  puts b.name.to_s
 
   albums.each do |album, songs|
     unless album.to_s == "quotes"
-      a = Album.create!(:name => album, :band_id => b.id)
+      a = Album.create!(name: album, band_id: b.id)
       puts "  #{a.name}"
 
       songs.each do |song|
-        s = Song.create!(:name => song, :album_id => a.id)
+        s = Song.create!(name: song, album_id: a.id)
         puts "    " + s.name
       end
 
@@ -349,7 +349,7 @@
   albums[:quotes].each do |song, excerpt|
     s = Song.find_by_name(song)
 
-    q = Quote.create!(:song_id => s.id, :band_id => b.id, :excerpt => excerpt)
+    q = Quote.create!(song_id: s.id, band_id: b.id, excerpt: excerpt)
 
     puts "  QUOTE: " + q.excerpt
     puts

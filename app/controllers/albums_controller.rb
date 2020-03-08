@@ -9,7 +9,7 @@ class AlbumsController < ApplicationController
     @title = @album.name + " by " + @album.band.name
 
     unless request.path == sanatized_album_seo_path(@album)
-      return redirect_to(sanatized_album_seo_path(@album))
+      redirect_to(sanatized_album_seo_path(@album))
     end
   end
 end

@@ -9,7 +9,7 @@ class BandsController < ApplicationController
     @title = @band.name
 
     unless request.path == sanatized_band_seo_path(@band)
-      return redirect_to(sanatized_band_seo_path(@band))
+      redirect_to(sanatized_band_seo_path(@band))
     end
   end
 end
