@@ -3,9 +3,12 @@ source 'https://rubygems.org'
 ruby '2.6.5'
 
 group :development, :test do
-  gem 'concurrent-ruby' # For: rubocop --parallel
+  # For: rubocop --parallel
+  gem 'concurrent-ruby'
   gem 'i18n'
+  gem 'minitest'
   gem 'rake'
+
   gem 'rubocop'
   gem 'rubocop-performance'
   gem 'rubocop-rspec'
