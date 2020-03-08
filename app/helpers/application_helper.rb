@@ -48,16 +48,6 @@ module ApplicationHelper
     @title.nil? ? tra : "#{@title} | #{tra}"
   end
 
-  # foot
-  def google_analytics google_analytics_key
-    javascript_tag("var gaJsHost = (('https:' == document.location.protocol) ? 'https://ssl.' : 'http://www.');
-                    document.write(unescape(\"%3Cscript src='\" + gaJsHost + \"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E\"));") +
-      javascript_tag("try {
-                        var pageTracker = _gat._getTracker('#{google_analytics_key}');
-                        pageTracker._trackPageview();
-                      } catch(err) {}")
-  end
-
   # convenience text
   def alt word
     content_tag(:abbr, word, class: 'alt')
