@@ -13,6 +13,7 @@ group :development, :test do
   gem 'mini_portile2', '2.4.0'
   gem 'nokogiri'
   gem 'rake'
+  gem 'rails-dom-testing'
   gem 'thread_safe'
   gem 'tzinfo', '1.2.6'
   gem 'zeitwerk'
