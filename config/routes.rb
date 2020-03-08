@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   get 'bands/show'
   root 'bands#index'
 
-  resources :albums, :bands, :songs, :quotes, only: %i[index show]
+  resources :albums, :bands, :songs, only: %i[index show]
+  resources :quotes, only: %i[index]
 
   get '/bands/:id/:band'                      => 'bands#show',  as: 'band_seo'
   get '/albums/:id/:album/by/:band'           => 'albums#show', as: 'album_seo'
