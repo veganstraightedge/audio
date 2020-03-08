@@ -6,12 +6,16 @@ class AlbumsController < ApplicationController
 
   def show
     @album = Album.find(params[:id])
-    @title = @album.name + ' by ' + @album.band.name
+    set_title
 
     redirect_to_seo_path
   end
 
   private
+
+  def set_title
+    @title = [@album.name, 'by', @album.band.name].join ' '
+  end
 
   def redirect_to_seo_path
     return if request.path == sanatized_album_seo_path(@album)
