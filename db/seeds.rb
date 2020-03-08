@@ -1,6 +1,6 @@
 {
-  "Aiden and Lucas" => {
-    :quotes => {
+  "Aiden and Lucas"             => {
+    :quotes      => {
       "Filler" => %q(What happened to you? You're not the same. Something in your head made a violent change.)
     },
 
@@ -12,13 +12,13 @@
     ]
   },
 
-  "Bombs and Beating Hearts" => {
-    :quotes => {
+  "Bombs and Beating Hearts"    => {
+    :quotes                       => {
       "01 Love Is Freedom" => %q(And we'll need love like this bomb inside of me. It can kill you or it can set you free. And we'll need violence like this beating heart you see. It can kill you or it can set you free.),
       "01 Love Is Freedom" => %q(How can you be afraid if your life never even starts? We're the deadliest things in the world, fucking bombs and beating hearts.)
     },
 
-    "From Dumpsters Rise" => [
+    "From Dumpsters Rise"         => [
       "01 Love Is Freedom",
       "02 U.S. And Them",
       "03 Anatomy Of An Activist",
@@ -48,12 +48,12 @@
     ]
   },
 
-  "Bramble" => {
-    :quotes => {
+  "Bramble"                     => {
+    :quotes       => {
       "02 The Bridge" => %q(And I'd like to sing you a glorious song... As we cross the bridge, from "What if we're right?"s, to "What could be wrong?"s)
     },
 
-    "H.A.G.S." => [
+    "H.A.G.S."    => [
       "01 Fruit Of The Moon",
       "02 The Bridge",
       "03 Trains X",
@@ -69,12 +69,12 @@
     ]
   },
 
-  "Fuck, Yes!!!!" => {
+  "Fuck, Yes!!!!"               => {
     :quotes => {
       "02 Fighting for Our Lives" => %q(When we fight, we're fighting for our lives. And you can bet that's a threat and we're not gonna stop until every last law is broken and every fucking cop is dead.)
     },
 
-    "Misc" => [
+    "Misc"  => [
       "01 A Toast to the Fallen",
       "02 Fighting for Our Lives",
       "03 Awfully Big Adventure",
@@ -84,7 +84,7 @@
       "07 Let it Go"
     ],
 
-    "Demo" => [
+    "Demo"  => [
       "01 Fifty Six And A Half Inches Of Freedom",
       "02 Fighting For Our Lives",
       "03 An Awfully Big Adventure (Live)",
@@ -92,8 +92,8 @@
     ]
   },
 
-  "Harper's Ferry Arsenal" => {
-    :quotes => {
+  "Harper's Ferry Arsenal"      => {
+    :quotes     => {
       "06 Same Shit, Different Stop" => %q(Alienated, we flock to the convenience of alienation and further cycle of exploitation and oppression, but I hope and I dream of a world where we rely on ourselves for all we need.)
     },
 
@@ -107,8 +107,8 @@
     ]
   },
 
-  "James Miska" => {
-    :quotes => {
+  "James Miska"                 => {
+    :quotes                                                            => {
       "02 Trebuchet" => %q(I see no reason we should all live and die alone.)
     },
 
@@ -124,11 +124,11 @@
       "11 Melea"
     ],
 
-    "Live at Red Light Books 5.12.2007" => [
+    "Live at Red Light Books 5.12.2007"                                => [
       "01 I Am Coming Home"
     ],
 
-    "Silverback Gorilla" => [
+    "Silverback Gorilla"                                               => [
       "01 Mischief",
       "02 Grace",
       "03 Chin Up",
@@ -148,7 +148,7 @@
       "17 Atonement"
     ],
 
-    "Time Alone" => [
+    "Time Alone"                                                       => [
       "01 Never (going away)",
       "02 Was (valentine's day)",
       "03 There (trains)",
@@ -166,7 +166,7 @@
       "15 Day (night's black skirt)"
     ],
 
-    "Live at Boing! 9.9.2005" => [
+    "Live at Boing! 9.9.2005"                                          => [
       "01 Raise Your Glasses",
       "02 Bloomington Backwoods",
       "03 47 Times",
@@ -178,7 +178,7 @@
       "09 Seriously, Who Gives A Fuck? You're Wasting Your Life Thinking About It."
     ],
 
-    "Saol, Ceol" => [
+    "Saol, Ceol"                                                       => [
       "01 The Airplane Song",
       "02 A Plague O'Both Our Houses",
       "03 The Intersection",
@@ -191,7 +191,7 @@
       "11 Raise Your Glasses"
     ],
 
-    "Live at Red Light Books 11.23.2007" => [
+    "Live at Red Light Books 11.23.2007"                               => [
       "01 The Newest One That He Doesn't Remember",
       "02 Talking Talking Talking 1",
       "03 Perfectionist",
@@ -217,19 +217,19 @@
       "23 The Land of 1000 Naps"
     ],
 
-    "Yep" => [
+    "Yep"                                                              => [
       "01 Grace",
       "02 Trains",
       "03 Unlocked"
     ]
   },
 
-  "Rise Over Run" => {
-    :quotes => {
+  "Rise Over Run"               => {
+    :quotes                                                        => {
       "19 Prauge Was A Good Start" => %q(I want peace. We all want peace. But I'd rather be free.)
     },
 
-    "Brycc House Benefit" => [
+    "Brycc House Benefit"                                          => [
       "05 Gladiator"
     ],
 
@@ -259,12 +259,12 @@
     ]
   },
 
-  "Ten Times Over" => {
+  "Ten Times Over"              => {
     :quotes => {
       "05 Open Letter to the FBI" => %q(This time we're not moving a fucking inch.)
     },
 
-    "Demo" => [
+    "Demo"  => [
       "01 Suffering",
       "02 Worship",
       "03 People",
@@ -273,12 +273,12 @@
     ]
   },
 
-  "The Mooks" => {
-    :quotes => {
+  "The Mooks"                   => {
+    :quotes                => {
       "06 Sweet Corn" => %q(Ten yard fight scoring in the end zone, while I'm stuck in the friend zone. You say you wanna be best friends. Fuck that. I wanna be your boyfriend.)
     },
 
-    "Like You Like You" => [
+    "Like You Like You"    => [
       "01 The Snuggle Continues"
     ],
 
@@ -295,11 +295,11 @@
   },
 
   "Yunavi (formerly Trebuchet)" => {
-    :quotes => {
+    :quotes                       => {
       "04 Defeatism Is For Losers" => %q(We don't care about the fire that's coming, because we're already candles burning.)
     },
 
-    "The Wilderness" => [
+    "The Wilderness"              => [
       "01 Opening Hymn",
       "02 7 Days Alone In The Woods",
       "03 Marrow House",
@@ -314,7 +314,7 @@
       "12 Take Time"
     ],
 
-    "Demo (as Trebuchet)" => [
+    "Demo (as Trebuchet)"         => [
       "01 32",
       "02 Postmodernism",
       "03 7 Days Alone in the Woods",

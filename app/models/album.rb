@@ -4,7 +4,7 @@ class Album < ApplicationRecord
 
   class << self
     def find_for_select
-      Album.all.map{ |album| ["#{album.band.name} : #{album.name}", album.id] }
+      Album.all.map { |album| ["#{album.band.name} : #{album.name}", album.id] }
     end
   end
 end

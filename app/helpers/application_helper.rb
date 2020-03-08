@@ -33,7 +33,7 @@ module ApplicationHelper
     "http://theresistancearmy.s3.amazonaws.com/audio/bands/#{band}/#{album}/#{song}.mp3"
   end
 
-  def sluggify text, separator='-'
+  def sluggify text, separator = '-'
     text.downcase.gsub(/\(|\)|\[|\]/, '')
         .gsub(/\./, separator)
         .gsub(/-$|,|!|'/, '')
@@ -77,11 +77,11 @@ module ApplicationHelper
   end
 
   # forms
-  def submit_button_tag button_text='Save', css_classes=''
+  def submit_button_tag button_text = 'Save', css_classes = ''
     content_tag(:button, button_text, type: 'submit', class: css_classes + ' positive button')
   end
 
-  def cancel_link_tag plural_path, singular_path=nil
+  def cancel_link_tag plural_path, singular_path = nil
     singular_path ||= plural_path
     link_to 'Cancel',
             (controller.action_name == 'index' ? plural_path : singular_path),
@@ -89,7 +89,7 @@ module ApplicationHelper
             class:   'cancel'
   end
 
-  def form_buttons plural_path, singular_path=nil, button_text='Save'
+  def form_buttons plural_path, singular_path = nil, button_text = 'Save'
     content_tag(
       :div,
       submit_button_tag(button_text) + cancel_link_tag(plural_path, singular_path),

@@ -4,7 +4,7 @@ class Band < ApplicationRecord
 
   class << self
     def find_for_select
-      Band.all.map{ |band| [band.name, band.id] }
+      Band.all.map { |band| [band.name, band.id] }
     end
   end
 end
