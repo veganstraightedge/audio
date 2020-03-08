@@ -10,6 +10,7 @@ group :development, :test do
   gem 'diff-lcs'
   gem 'ffi'
   gem 'google-analytics-rails'
+  gem 'listen'
   gem 'msgpack'
   gem 'rails'
   gem 'rb-fsevent'
