@@ -8,6 +8,7 @@ group :development, :test do
   gem 'i18n'
   gem 'minitest'
   gem 'rake'
+  gem 'thread_safe'
 
   gem 'rubocop'
   gem 'rubocop-performance'
