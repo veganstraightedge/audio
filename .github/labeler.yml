@@ -5,7 +5,7 @@ Migrations:
   - db/migrate/*
   - db/schema.rb
 
-Dependencies":
+Dependencies:
   - Gemfile
   - Gemfile.lock
 
