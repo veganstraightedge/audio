@@ -51,4 +51,5 @@ jobs:
         env:
           PGUSER: postgres
         run: |
-          rspec
+          bundle exec rails db:setup
+          bundle exec rspec
