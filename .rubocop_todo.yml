@@ -6,28 +6,6 @@
 # Note that changes in the inspected code, or installation of new
 # versions of RuboCop, may require this file to be generated again.
 
-# Offense count: 5
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: leading, trailing
-Layout/DotPosition:
-  Exclude:
-    - 'app/helpers/application_helper.rb'
-
-# Offense count: 1
-# Cop supports --auto-correct.
-Layout/EmptyLinesAroundArguments:
-  Exclude:
-    - 'app/helpers/application_helper.rb'
-
-# Offense count: 2
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: empty_lines, empty_lines_except_namespace, empty_lines_special, no_empty_lines
-Layout/EmptyLinesAroundModuleBody:
-  Exclude:
-    - 'app/helpers/application_helper.rb'
-
 # Offense count: 1
 # Cop supports --auto-correct.
 # Configuration parameters: AllowForAlignment, AllowBeforeTrailingComments, ForceEqualSignAlignment.
@@ -44,14 +22,6 @@ Layout/ExtraSpacing:
 Layout/HashAlignment:
   Exclude:
     - 'db/seeds.rb'
-
-# Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, IndentationWidth.
-# SupportedStyles: aligned, indented
-Layout/MultilineOperationIndentation:
-  Exclude:
-    - 'app/helpers/application_helper.rb'
 
 # Offense count: 6
 # Cop supports --auto-correct.
@@ -102,7 +72,6 @@ Metrics/AbcSize:
 Performance/StringReplacement:
   Exclude:
     - 'app/controllers/application_controller.rb'
-    - 'app/helpers/application_helper.rb'
 
 # Offense count: 3
 # Configuration parameters: MinBodyLength.
@@ -119,7 +88,6 @@ Style/GuardClause:
 Style/HashSyntax:
   Exclude:
     - 'app/controllers/songs_controller.rb'
-    - 'app/helpers/application_helper.rb'
     - 'app/models/album.rb'
     - 'app/models/band.rb'
     - 'app/models/song.rb'
@@ -140,7 +108,6 @@ Style/IfUnlessModifier:
 Style/MethodDefParentheses:
   Exclude:
     - 'app/controllers/application_controller.rb'
-    - 'app/helpers/application_helper.rb'
 
 # Offense count: 1
 # Cop supports --auto-correct.
@@ -178,7 +145,6 @@ Style/RedundantReturn:
 Style/RegexpLiteral:
   Exclude:
     - 'app/controllers/application_controller.rb'
-    - 'app/helpers/application_helper.rb'
 
 # Offense count: 294
 # Cop supports --auto-correct.
@@ -190,7 +156,6 @@ Style/StringLiterals:
     - 'app/controllers/application_controller.rb'
     - 'app/controllers/bands_controller.rb'
     - 'app/controllers/songs_controller.rb'
-    - 'app/helpers/application_helper.rb'
     - 'app/models/song.rb'
     - 'config/environments/production.rb'
     - 'config/puma.rb'
