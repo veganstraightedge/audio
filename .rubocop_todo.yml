@@ -8,31 +8,6 @@ Lint/DuplicateHashKey:
 Metrics/AbcSize:
   Max: 19
 
-# Offense count: 3
-# Configuration parameters: MinBodyLength.
-Style/GuardClause:
-  Exclude:
-    - 'app/controllers/albums_controller.rb'
-    - 'app/controllers/bands_controller.rb'
-    - 'app/controllers/songs_controller.rb'
-
-# Offense count: 3
-# Cop supports --auto-correct.
-Style/IfUnlessModifier:
-  Exclude:
-    - 'app/controllers/albums_controller.rb'
-    - 'app/controllers/bands_controller.rb'
-    - 'app/controllers/songs_controller.rb'
-
-
-# Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: IgnoredMethods.
-# IgnoredMethods: respond_to, define_method
-Style/SymbolProc:
-  Exclude:
-    - 'app/controllers/bands_controller.rb'
-
 # Offense count: 51
 # Cop supports --auto-correct.
 # Configuration parameters: AutoCorrect, AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, IgnoredPatterns.

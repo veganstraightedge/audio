@@ -8,8 +8,6 @@ class AlbumsController < ApplicationController
     @album = Album.find(params[:id])
     @title = @album.name + ' by ' + @album.band.name
 
-    unless request.path == sanatized_album_seo_path(@album)
-      redirect_to(sanatized_album_seo_path(@album))
-    end
+    redirect_to(sanatized_album_seo_path(@album)) unless request.path == sanatized_album_seo_path(@album)
   end
 end
