@@ -6,6 +6,7 @@ group :development, :test do
   # For: rubocop --parallel
   gem 'bindex'
   gem 'bootsnap'
+  gem 'byebug'
   gem 'msgpack'
   gem 'rails'
 
