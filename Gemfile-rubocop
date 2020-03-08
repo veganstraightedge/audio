@@ -10,6 +10,7 @@ group :development, :test do
   gem 'rake'
   gem 'thread_safe'
   gem 'tzinfo', '1.2.6'
+  gem 'zeitwerk'
 
   gem 'rubocop'
   gem 'rubocop-performance'

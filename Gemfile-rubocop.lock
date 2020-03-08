@@ -30,6 +30,7 @@ GEM
     tzinfo (1.2.6)
       thread_safe (~> 0.1)
     unicode-display_width (1.6.1)
+    zeitwerk (2.3.0)
 
 PLATFORMS
   ruby
@@ -44,6 +45,7 @@ DEPENDENCIES
   rubocop-rspec
   thread_safe
   tzinfo (= 1.2.6)
+  zeitwerk
 
 RUBY VERSION
    ruby 2.6.5p114
