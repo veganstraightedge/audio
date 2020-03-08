@@ -15,6 +15,7 @@ group :development, :test do
   gem 'minitest'
   gem 'mini_portile2', '2.4.0'
   gem 'nokogiri'
+  gem 'rack'
   gem 'rake'
   gem 'rails-dom-testing'
   gem 'rails-html-sanitizer'

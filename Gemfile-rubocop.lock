@@ -31,6 +31,7 @@ GEM
     parallel (1.19.1)
     parser (2.7.0.4)
       ast (~> 2.4.0)
+    rack (2.2.2)
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
@@ -73,6 +74,7 @@ DEPENDENCIES
   mini_portile2 (= 2.4.0)
   minitest
   nokogiri
+  rack
   rails-dom-testing
   rails-html-sanitizer
   rake
