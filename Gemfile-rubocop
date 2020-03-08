@@ -4,6 +4,7 @@ ruby '2.6.5'
 
 group :development, :test do
   gem 'concurrent-ruby' # For: rubocop --parallel
+  gem 'i18n'
   gem 'rake'
   gem 'rubocop'
   gem 'rubocop-performance'
