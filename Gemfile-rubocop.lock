@@ -14,7 +14,7 @@ GEM
     i18n (1.8.2)
       concurrent-ruby (~> 1.0)
     jaro_winkler (1.5.4)
-    mini_portile2 (2.5.0)
+    mini_portile2 (2.4.0)
     minitest (5.14.0)
     parallel (1.19.1)
     parser (2.7.0.4)
@@ -50,7 +50,7 @@ DEPENDENCIES
   concurrent-ruby
   erubi
   i18n
-  mini_portile2
+  mini_portile2 (= 2.4.0)
   minitest
   rake
   rubocop

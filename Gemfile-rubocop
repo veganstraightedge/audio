@@ -10,7 +10,7 @@ group :development, :test do
   gem 'erubi'
   gem 'i18n'
   gem 'minitest'
-  gem 'mini_portile2'
+  gem 'mini_portile2', '2.4.0'
   gem 'rake'
   gem 'thread_safe'
   gem 'tzinfo', '1.2.6'
