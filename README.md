@@ -1,24 +1,21 @@
-# README
+# The Resistance Army Audio
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Band URLs to redirect
 
-Things you may want to cover:
+/bands/3/bombs-and-beating-hearts
+/bands/8/bramble
+/bands/1/fuck-yes
+/bands/6/harpers-ferry-arsenal
+/bands/2/james-miska
+/bands/7/rise-over-run
+/bands/4/the-mooks
+/bands/5/yunavi-(formerly-trebuchet)
 
-* Ruby version
+# TODO
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Convert to static site
+- Use bootstrap
+- Make into a modern Heroku app
+- Move to GitHub Pages?
+- Add HTTPS
+- Add HTTP -> HTTPS redirect
