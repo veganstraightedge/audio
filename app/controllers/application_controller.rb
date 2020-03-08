@@ -21,7 +21,11 @@ class ApplicationController < ActionController::Base
   end
 
   def sanatize_for_url thing
-    thing.downcase.gsub(/&/, 'and').tr(' ', '-').gsub(%r{,|\.|'|/|\\|!|:|\?|#|\(|\)|\[|\]}, '').gsub(/--/, '-')
+    thing.downcase
+         .gsub(/&/, 'and')
+         .tr(' ', '-')
+         .gsub(%r{,|\.|'|/|\\|!|:|\?|#|\(|\)|\[|\]}, '')
+         .gsub(/--/, '-')
   end
   # ...formerly lib/url
 end
