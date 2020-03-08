@@ -15,6 +15,9 @@ GEM
     i18n (1.8.2)
       concurrent-ruby (~> 1.0)
     jaro_winkler (1.5.4)
+    loofah (2.4.0)
+      crass (~> 1.0.2)
+      nokogiri (>= 1.5.9)
     mini_portile2 (2.4.0)
     minitest (5.14.0)
     nokogiri (1.10.9)
@@ -57,6 +60,7 @@ DEPENDENCIES
   crass
   erubi
   i18n
+  loofah
   mini_portile2 (= 2.4.0)
   minitest
   nokogiri
