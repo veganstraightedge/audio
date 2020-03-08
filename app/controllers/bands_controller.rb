@@ -1,6 +1,6 @@
 class BandsController < ApplicationController
   def index
-    @title = "All Bands"
+    @title = 'All Bands'
     @bands = Band.all.sort_by { |b| b.name }
   end
 

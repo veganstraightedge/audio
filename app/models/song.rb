@@ -1,7 +1,7 @@
 class Song < ApplicationRecord
   belongs_to :album
   has_many :quotes, dependent: :destroy
-  default_scope { order("name ASC") }
+  default_scope { order('name ASC') }
 
   class << self
     def find_for_select
@@ -10,6 +10,6 @@ class Song < ApplicationRecord
   end
 
   def pretty_name
-    name.gsub(/^\d+\W/, "")
+    name.gsub(/^\d+\W/, '')
   end
 end

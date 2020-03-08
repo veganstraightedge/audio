@@ -24,37 +24,6 @@ Style/IfUnlessModifier:
     - 'app/controllers/bands_controller.rb'
     - 'app/controllers/songs_controller.rb'
 
-# Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, MinBodyLength.
-# SupportedStyles: skip_modifier_ifs, always
-Style/Next:
-  Exclude:
-    - 'db/seeds.rb'
-
-# Offense count: 294
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, ConsistentQuotesInMultiline.
-# SupportedStyles: single_quotes, double_quotes
-Style/StringLiterals:
-  Exclude:
-    - 'app/controllers/albums_controller.rb'
-    - 'app/controllers/application_controller.rb'
-    - 'app/controllers/bands_controller.rb'
-    - 'app/controllers/songs_controller.rb'
-    - 'app/models/song.rb'
-    - 'config/environments/production.rb'
-    - 'config/puma.rb'
-    - 'config/routes.rb'
-    - 'config/spring.rb'
-    - 'db/seeds.rb'
-
-# Offense count: 3
-# Cop supports --auto-correct.
-# Configuration parameters: MinSize.
-# SupportedStyles: percent, brackets
-Style/SymbolArray:
-  EnforcedStyle: brackets
 
 # Offense count: 1
 # Cop supports --auto-correct.
