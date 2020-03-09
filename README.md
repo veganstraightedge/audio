@@ -18,4 +18,3 @@
 - Move to GitHub Pages?
 - Add HTTPS
 - Add HTTP -> HTTPS redirect
-- Add Dependabot
