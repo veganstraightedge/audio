@@ -21,6 +21,7 @@ group :development, :test do
   gem 'ruby_dep'
   gem 'sassc-rails'
   gem 'web-console'
+  gem 'will_paginate'
 
   gem 'rubocop'
   gem 'rubocop-performance'
