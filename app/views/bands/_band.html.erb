@@ -5,8 +5,12 @@
 
   <%= render band.quotes.first %>
 
-  <b>Albums:</b>
-  <% band.albums.each do |album| %>
-    <%= link_to album.name, album, class: "mr-3" %>
+  <% if show_action? %>
+    <%= render band.albums %>
+  <% else %>
+    <b>Albums:</b>
+    <% band.albums.each do |album| %>
+      <%= link_to album.name, album, class: "mr-3" %>
+    <% end %>
   <% end %>
 </section>
