@@ -15,7 +15,7 @@
 
 - Convert to static site
 - Use bootstrap
-- Make into a modern Heroku app
 - Move to GitHub Pages?
 - Add HTTPS
 - Add HTTP -> HTTPS redirect
+- Add Dependabot
