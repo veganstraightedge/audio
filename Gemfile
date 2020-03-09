@@ -2,11 +2,19 @@ source 'https://rubygems.org'
 
 ruby '2.6.5'
 
+# Application server
 gem 'bootsnap', require: false
-gem 'google-analytics-rails'
-gem 'pg'
-gem 'puma'
 gem 'rails'
+
+# Database
+gem 'pg'
+
+# Webserver
+gem 'puma'
+
+# Views
+gem 'bootstrap', '~> 4.3.1'
+gem 'google-analytics-rails'
 gem 'sassc-rails'
 gem 'will_paginate'
 

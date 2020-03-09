@@ -23,11 +23,6 @@ module ApplicationHelper
   end
   # ...formerly lib/url
 
-  # temp user auth helper stubs
-  def logged_in?
-    false
-  end
-
   def remote_audio_url song
     band  = sluggify(song.album.band.name)
     album = sluggify(song.album.name)

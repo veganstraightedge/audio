@@ -1,11 +1,16 @@
-<tr>
-  <td><%= link_to quote.band.name, quote.band %>
-  <td><%= quote.excerpt %>
-  <td><%= link_to quote.song.pretty_name, quote.song %>
-  <td class="actions">
-    <% if logged_in? %>
-      <%= link_to "Edit", edit_quote_path(quote) %>
-      <%= link_to "Destroy", quote, :confirm => 'Are you sure?', :method => :delete %>
-    <% end %>
-  </td>
-</tr>
+<blockquote class="">
+  <p class="mb-0 display-4">
+    <%= quote.excerpt %>
+  </p>
+
+  <footer class="h2 font-weight-light text-muted">
+    <span class="alt">from</span>
+
+    <cite title="<%= quote.song.pretty_name %>">
+      <%= link_to quote.song.pretty_name, quote.song %>
+
+      <span class="alt">by</span>
+      <%= link_to quote.band.name, quote.band %>
+    </cite>
+  </footer>
+</blockquote>
