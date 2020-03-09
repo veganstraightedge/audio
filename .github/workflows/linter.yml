@@ -1,0 +1,25 @@
+on: [push]
+
+name: Linter
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set up Ruby 2.6
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.6
+
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - name: Install dependencies with Bundler
+        run: |
+          gem install bundler
+          bundle install
+
+      - name: Run linter
+        run: |
+          bundle exec rubocop --parallel

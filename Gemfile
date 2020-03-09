@@ -7,7 +7,7 @@ gem 'google-analytics-rails'
 gem 'pg'
 gem 'puma'
 gem 'rails'
-gem 'sass-rails'
+gem 'sassc-rails'
 gem 'will_paginate'
 
 group :development, :test do
