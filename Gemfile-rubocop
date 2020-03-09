@@ -20,6 +20,7 @@ group :development, :test do
   gem 'rb-inotify'
   gem 'ruby_dep'
   gem 'sassc-rails'
+  gem 'web-console'
 
   gem 'rubocop'
   gem 'rubocop-performance'
