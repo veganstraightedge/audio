@@ -14,7 +14,6 @@
 # TODO
 
 - Convert to static site
-- Use bootstrap
 - Move to GitHub Pages?
 - Add HTTPS
 - Add HTTP -> HTTPS redirect
