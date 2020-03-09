@@ -1,5 +1,7 @@
-<section class="mb-3" id="<%= classifize(song.pretty_name + "_from_" + song.album.name) %>">
-  <h4><%= link_to_unless_current song.pretty_name, sanatized_song_seo_path(song) %></h4>
+<section class="mb-4" id="<%= classifize(song.pretty_name + "_from_" + song.album.name) %>">
+  <h4 class=" <%= 'h1' if show_action? && controller_name == "songs" %>">
+    <%= link_to_unless_current song.pretty_name, sanatized_song_seo_path(song) %>
+  </h4>
 
   <% if controller_name == "songs" %>
     <div class="meta">
@@ -10,15 +12,11 @@
     </div>
 
     <% if show_action? %>
-      <audio class="player" controls>
+      <audio class="my-3 w-100" controls>
         <source src="<%= remote_audio_url(song) %>">
       </audio>
     <% end %>
   <% end %>
 
-  <div class="download">
-    <%= link_to "Download", remote_audio_url(song) %>
-
-    <span class="text-muted">(MP3)</span>
-  </div>
+  <%= link_to "Download MP3", remote_audio_url(song), class: "btn btn-sm btn-outline-secondary" %>
 </section>
