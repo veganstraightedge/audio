@@ -3,39 +3,37 @@
 <html>
 <head>
   <title><%= page_title %></title>
-  <%= stylesheet_link_tag "application", media: "all" %>
 
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <%= stylesheet_link_tag "application", media: "all" %>
 </head>
+
 <body id="<%= controller_name %>">
-
-  <header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
     <div class="container">
-      <h1 class="column span-16">
-        <%= link_to_unless_current "The Resistance Army Audio Project", root_path, :accesskey => "/" %>
-      </h1>
+      <%= link_to t(:brand), root_path, accesskey: "/", class: "navbar-brand" %>
 
-      <nav class="column span-8 last">
-        <ul>
-          <li><%= link_to_unless_current "Bands", bands_path %></li>
-          <li><%= link_to_unless_current "Albums", albums_path %></li>
-          <li><%= link_to_unless_current "Songs", songs_path %></li>
-        </ul>
-      </nav>
+      <ul class="navbar-nav">
+        <% %i[bands albums songs].each do |section| %>
+          <li class="nav-item">
+            <%= link_to section.capitalize, [section], class: "nav-link" %>
+          </li>
+        <% end %>
+      </ul>
     </div>
-  </header>
+  </nav>
 
   <div class="container">
-    <% if flash[:notice] %>
-      <div class="notice"><%= flash[:notice] %></div>
-    <% end %>
-
     <%= yield %>
   </div>
 
-  <footer>
-    <span class="alt">Free as the Air You Breathe</span>
+  <footer class="container">
+    <p class="text-right text-muted my-5"><%= t :pricing %></p>
   </footer>
 
   <%= analytics_init if Rails.env.production? %>

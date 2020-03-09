@@ -30,4 +30,5 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  brand: The Resistance Army Audio Project
+  pricing: Free as the air you breathe
