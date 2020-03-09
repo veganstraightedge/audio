@@ -1,6 +1,6 @@
 <section class="mb-5" id="<%= classifize(album.name + "_by_" + album.band.name) %>">
   <% if controller_name == "albums" %>
-    <h2 class="display-4"><%= link_to album.band.name, sanatized_band_seo_path(album.band), :class => "band_name" %></h2>
+    <h2 class="display-4"><%= link_to album.band.name, sanatized_band_seo_path(album.band) %></h2>
   <% end %>
 
   <h3 class="h2">
