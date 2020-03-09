@@ -5,5 +5,8 @@
 
   <%= render band.quotes.first %>
 
-  <%= render band.albums.sort_by{ |a| a.name } if show_action? %>
+  <b>Albums:</b>
+  <% band.albums.each do |album| %>
+    <%= link_to album.name, album, class: "mr-3" %>
+  <% end %>
 </section>
